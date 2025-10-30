@@ -19,7 +19,7 @@ class Config:
 
     messages: dict = None
 
-    redis_url: str = os.getenv("REDIS_URL", "redis://localhost:6379")
+    redis_url: str = os.getenv("REDIS_URL", "redis://host.docker.internal:6379")
 
     def __post_init__(self):
         if self.default_permissions is None:
